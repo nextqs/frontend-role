@@ -14,51 +14,54 @@ Neste desafio, você deverá desenvolver uma aplicação Angular para exibir uma
      - **Texto da Citação**
 
 2. **Requisição à API:**
-   - Utilize a rota `/quotes` da API para buscar as citações. Exemplo de chamada para obter 10 citações: 
+   - Utilize a rota `/quotes` da API para buscar as citações. Exemplo de chamada para obter 10 citações:
      ```
      https://thesimpsonsquoteapi.glitch.me/quotes?count=10
      ```
    - Certifique-se de que a aplicação realiza uma nova chamada à API cada vez que a página é carregada, garantindo que as citações sejam sempre atualizadas.
 
-3. **Responsividade:**
+3. **Botão de Atualização (Refresh):**
+   - Implemente um botão que permita ao usuário atualizar a lista de citações, fazendo uma nova chamada à API e exibindo um novo conjunto de 10 citações.
+
+4. **Responsividade:**
    - Certifique-se de que a aplicação seja totalmente responsiva, proporcionando uma boa experiência tanto em dispositivos móveis quanto em desktops.
 
-### Requisitos Extras (Opcional)
+5. **Testes Unitários e de Aceitação:**
+   - **Testes Unitários:** Implemente testes unitários para os componentes, serviços, e outras funcionalidades essenciais da aplicação, garantindo que o código esteja coberto por testes automatizados.
+   - **Testes de Aceitação:** Implemente testes de aceitação para verificar se a aplicação atende aos requisitos funcionais definidos, testando a interação entre diferentes componentes e a integração com a API.
 
-- **Atualizar Citações:**
-  - Implemente um botão que permita ao usuário atualizar a lista de citações, fazendo uma nova chamada à API e exibindo um novo conjunto de 10 citações.
+   - Utilize ferramentas como **Jasmine** e **Karma** (já configuradas em projetos Angular) para os testes unitários.
+   - Para testes de aceitação, você pode utilizar **Protractor** ou **Cypress** (opcional).
 
-- **Favoritos:**
-  - Permita que o usuário adicione citações à uma lista de favoritos, armazenada localmente no navegador.
+## Instruções de Configuração e Execução
 
-## Instruções de Configuração
-
-1. **Fork do Repositório:**
-   - Faça um fork deste repositório para sua conta no GitHub.
-
-2. **Clone o Repositório:**
+1. **Clone o Repositório:**
    - Clone o repositório para sua máquina local utilizando o comando:
      ```bash
      git clone https://github.com/seu-usuario/seu-repositorio.git
      ```
 
-## Executando a Aplicação com Docker
-
-Para facilitar a execução da aplicação, fornecemos um ambiente Docker. Siga as instruções abaixo:
-
-1. **Construir e Executar:**
-   - Utilize o seguinte comando para construir a imagem Docker e iniciar o container:
+2. **Instale as Dependências:**
+   - Navegue até o diretório do projeto e execute:
      ```bash
-     docker-compose up --build
+     npm install
      ```
 
-2. **Acessar a Aplicação:**
-   - Após a construção e inicialização, acesse a aplicação no navegador em `http://localhost:8080`.
-
-3. **Parar o Container:**
-   - Para parar a execução do container, utilize:
+3. **Inicie o Servidor de Desenvolvimento:**
+   - Inicie o servidor de desenvolvimento Angular com o comando:
      ```bash
-     docker-compose down
+     ng serve
+     ```
+   - Acesse a aplicação no navegador em `http://localhost:4200`.
+
+4. **Executar Testes:**
+   - Para rodar os testes unitários, utilize:
+     ```bash
+     ng test
+     ```
+   - Para rodar os testes de aceitação (caso tenha implementado), utilize:
+     ```bash
+     ng e2e
      ```
 
 ## Entrega
@@ -79,3 +82,7 @@ Para facilitar a execução da aplicação, fornecemos um ambiente Docker. Siga 
 - **Qualidade do Código:** O código é bem estruturado, organizado e segue boas práticas?
 - **Componentização:** A aplicação está devidamente modularizada em componentes Angular?
 - **Estilização:** A interface é agradável, bem estilizada e responsiva?
+- **Testes:** A aplicação possui uma cobertura adequada de testes unitários e de aceitação?
+- **Uso do Git:** O uso do Git (commits, branches, PR) está organizado e segue boas práticas?
+
+---
