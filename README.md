@@ -42,18 +42,24 @@ Neste desafio, você deverá desenvolver uma aplicação Angular para exibir uma
      git clone https://github.com/seu-usuario/seu-repositorio.git
      ```
 
-3. **Instale as Dependências:**
-   - Navegue até o diretório do projeto e execute:
+## Executando a Aplicação com Docker
+
+Para facilitar a execução da aplicação, fornecemos um ambiente Docker. Siga as instruções abaixo:
+
+1. **Construir e Executar:**
+   - Utilize o seguinte comando para construir a imagem Docker e iniciar o container:
      ```bash
-     npm install
+     docker-compose up --build
      ```
 
-4. **Inicie o Servidor de Desenvolvimento:**
-   - Inicie o servidor de desenvolvimento Angular com o comando:
+2. **Acessar a Aplicação:**
+   - Após a construção e inicialização, acesse a aplicação no navegador em `http://localhost:8080`.
+
+3. **Parar o Container:**
+   - Para parar a execução do container, utilize:
      ```bash
-     ng serve
+     docker-compose down
      ```
-   - Acesse a aplicação no navegador em `http://localhost:4200`.
 
 ## Entrega
 
