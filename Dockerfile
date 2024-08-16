@@ -20,7 +20,7 @@ RUN npm run build --prod
 FROM nginx:alpine
 
 # Copia os arquivos compilados do Angular para o diretório padrão do Nginx
-COPY --from=build /app/dist/<nome-do-seu-projeto> /usr/share/nginx/html
+COPY --from=build /app/dist/frontend-role /usr/share/nginx/html
 
 # Exposição da porta 80 para servir a aplicação
 EXPOSE 80
