@@ -26,12 +26,10 @@ Neste desafio, você deverá desenvolver uma aplicação Angular para exibir uma
 4. **Responsividade:**
    - Certifique-se de que a aplicação seja totalmente responsiva, proporcionando uma boa experiência tanto em dispositivos móveis quanto em desktops.
 
-5. **Testes Unitários e de Aceitação:**
+5. **Testes Unitários:**
    - **Testes Unitários:** Implemente testes unitários para os componentes, serviços, e outras funcionalidades essenciais da aplicação, garantindo que o código esteja coberto por testes automatizados.
-   - **Testes de Aceitação:** Implemente testes de aceitação para verificar se a aplicação atende aos requisitos funcionais definidos, testando a interação entre diferentes componentes e a integração com a API.
 
    - Utilize ferramentas como **Jasmine** e **Karma** (já configuradas em projetos Angular) para os testes unitários.
-   - Para testes de aceitação, você pode utilizar **Protractor** ou **Cypress** (opcional).
 
 ## Instruções de Configuração e Execução
 
@@ -68,13 +66,10 @@ Neste desafio, você deverá desenvolver uma aplicação Angular para exibir uma
 
 1. **Branch e Pull Request:**
    - Crie uma nova branch com o nome `desafio/<seu-nome>` (exemplo: `desafio/jose-silva`).
-   - Após concluir o desafio, envie um Pull Request para o repositório original.
+   - Após concluir o desafio, envie um Pull Request para o repositório original marcando Marcelo Melo como revisor.
 
-2. **Prazo de Entrega:**
-   - O desafio deve ser entregue até [data limite].
-
-3. **Envio Final:**
-   - Envie um e-mail para [seu email] com o link do Pull Request.
+2. **Envio Final:**
+   - Envie um e-mail para marcelo.melo@nextqs.com com o link do Pull Request.
 
 ## Critérios de Avaliação
 
