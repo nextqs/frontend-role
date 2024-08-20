@@ -1,0 +1,13 @@
+
+
+<main>
+    @for(quote of quotes(); track quote){
+        <div>
+            <img [src]="quote.image">
+            <h1>{{ quote.character }}</h1>
+            <p>{{ quote.quote }}</p>
+        </div>
+    }
+</main>
+
+
