@@ -1,0 +1,32 @@
+.search{
+    display: flex;
+    margin: 2rem;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+
+    input{
+        padding: 0.5rem;
+        outline: none;
+        border-radius: 0.5rem;
+        border: solid rgb(152, 80, 219) 1px;
+        background-color: rgb(48, 9, 84);
+        color: white;
+        width: 60%;
+        
+    }
+    ::placeholder{
+        color: rgb(204, 165, 240);
+        font-weight: 100;
+    }
+    button{
+        border: none;
+        background-color: rgb(152, 80, 219) ;
+        color: white;
+        padding: 0.5rem;
+        border-radius: 0.5rem;
+        border: solid rgb(152, 80, 219) 1px;
+    }
+
+}
