@@ -1,13 +1,12 @@
-
-
 <main>
+    <app-search></app-search>
+<section>
     @for(quote of quotes(); track quote){
-        <div>
+        <div class="quote">
             <img [src]="quote.image">
             <h1>{{ quote.character }}</h1>
             <p>{{ quote.quote }}</p>
         </div>
     }
+</section>
 </main>
-
-

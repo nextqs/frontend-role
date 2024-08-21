@@ -1,6 +1,6 @@
 import { Component } from "@angular/core";
 import { RouterOutlet } from "@angular/router";
-import { QuotesComponent } from "./quotes/quotes.component";
+import { QuotesComponent } from "./components/quotes/quotes.component";
 
 @Component({
 	selector: "app-root",
@@ -9,6 +9,4 @@ import { QuotesComponent } from "./quotes/quotes.component";
 	templateUrl: "./app.component.html",
 	styleUrl: "./app.component.scss",
 })
-export class AppComponent {
-	title = "frontend-role";
-}
+export class AppComponent {}
