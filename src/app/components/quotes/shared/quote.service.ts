@@ -3,11 +3,11 @@ import type { Quote } from "./quote.model";
 
 @Injectable({ providedIn: "root" })
 export class QuoteService {
-	async getQuotes(input?: HTMLInputElement) {
+	async getQuotes(input?: string) {
 		let count = 10;
 		//Verificar se o input existe
 		if (input) {
-			const answer = Number(input.value);
+			const answer = Number(input);
 			//Caso exista, verificar se o seu valor é um número diferente de 0
 			if (!Number.isNaN(answer) && answer !== 0) {
 				//Atribuir o input do usuário ao contador

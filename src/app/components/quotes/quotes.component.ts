@@ -21,11 +21,11 @@ export class QuotesComponent implements OnInit {
 	) {
 		//Recarregar citações baseado no valor do input caso o botão do componente Search tenha sido apertado
 		this.searchService.getRefresh().subscribe((input) => {
-			this.setQuotes(input);
+			this.setQuotes(input.value);
 		});
 	}
 	//Definir as citações na variável local a partir do serviço
-	setQuotes(input?: HTMLInputElement) {
+	setQuotes(input?: string) {
 		this.quoteService
 			.getQuotes(input)
 			.then((quotes) => this.quotes.set(quotes));

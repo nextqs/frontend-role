@@ -17,6 +17,10 @@ main{
         gap: 4rem;
         background-color: rgb(17, 3, 30);
         
+        h1{
+            color: white;
+            z-index: 10;
+        }
         .quote{
             display: flex;
             flex-flow: column;
