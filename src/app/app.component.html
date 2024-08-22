@@ -1,2 +1,10 @@
-<button (click)="onRefresh()">Refresh</button>
-<app-card *ngFor="let information of informations" [information]="information"></app-card>
+<main class="main-container">
+    <header>
+        <h1>The Simpsons</h1>
+        <button (click)="onRefresh()">Refresh</button>
+    </header>
+
+    <section>
+        <app-card *ngFor="let information of informations" [information]="information"></app-card>
+    </section>
+</main>
