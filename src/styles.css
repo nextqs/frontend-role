@@ -1,5 +1,19 @@
 /* You can add global styles to this file, and also import other style files */
-body {
-    background-color: #EAD340;
-    margin: 0;
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+:root {
+    --cor-fundo: #EAD340;
+    --cor-branco: #fff;
+    --cor-azul: #2498F0;
+    --cor-cinza: #dfdfdf;
+
+    --shadow: 1px 1px 10px rgba(0, 0, 0,  0.2);
+    --hover: #0070c5;
 }
+
+body {
+    background-color: var(--cor-fundo);
+    margin: 0;
+    font-family: "Inter", sans-serif;
+}
+
