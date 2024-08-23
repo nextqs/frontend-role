@@ -1,0 +1,13 @@
+<div class="card-container">
+
+  <div class="info-container">
+    <!-- Shows the character's name if it is available -->
+    <h2>{{ information?.character }}</h2>
+      
+    <!-- Shows the character's quote if it is available -->
+    <p>{{ information?.quote }}</p>
+  </div>
+
+  <!-- Shows the image if the image URL is available -->
+  <img *ngIf="information?.image" [src]="information?.image" alt="Image" /> 
+</div>

@@ -1,29 +1,48 @@
-import { TestBed } from '@angular/core/testing';
+import { TestBed, ComponentFixture } from '@angular/core/testing';
 import { AppComponent } from './app.component';
+import { ServiceServices } from './services/services.service';
+import { of } from 'rxjs';
+import { Information } from '../Info';
+import { provideHttpClientTesting } from '@angular/common/http/testing';
 
 describe('AppComponent', () => {
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
+  let component: AppComponent;
+  let fixture: ComponentFixture<AppComponent>;
+  let serviceSpy: jasmine.SpyObj<ServiceServices>;
+
+  const mockData: Information[] = [{} as Information, {} as Information];
+
+  beforeEach(() => {
+    const spy = jasmine.createSpyObj('ServiceServices', ['getData']);
+
+    TestBed.configureTestingModule({
       imports: [AppComponent],
+      providers: [
+        { provide: ServiceServices, useValue: spy },
+        provideHttpClientTesting()
+      ]
     }).compileComponents();
+
+    fixture = TestBed.createComponent(AppComponent);
+    component = fixture.componentInstance;
+    serviceSpy = TestBed.inject(ServiceServices) as jasmine.SpyObj<ServiceServices>;
   });
 
-  it('should create the app', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.componentInstance;
-    expect(app).toBeTruthy();
+  it('should create the component', () => {
+    expect(component).toBeTruthy();
   });
 
-  it(`should have the 'frontend-role' title`, () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.componentInstance;
-    expect(app.title).toEqual('frontend-role');
+  it('should fetch data and set informations array', () => {
+    serviceSpy.getData.and.returnValue(of(mockData));
+    component.fetchData();
+    expect(serviceSpy.getData).toHaveBeenCalled();
+    expect(component.informations).toEqual(mockData);
   });
 
-  it('should render title', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    fixture.detectChanges();
-    const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('h1')?.textContent).toContain('Hello, frontend-role');
+  it('should refresh data when onRefresh is called', () => {
+    serviceSpy.getData.and.returnValue(of(mockData));
+    component.onRefresh();
+    expect(serviceSpy.getData).toHaveBeenCalled();
+    expect(component.informations).toEqual(mockData);
   });
 });
