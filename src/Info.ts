@@ -1,5 +1,5 @@
 export interface Information{
-    quote?: number;
+    quote?: string;
     character?: string;
     image?:  string;
 }

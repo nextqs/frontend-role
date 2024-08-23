@@ -1,6 +1,6 @@
 .card-container {
     width: 75%;
-    height: 90%;
+    height: 60vh;
     padding: 2rem;
     background-color: var(--cor-cinza);
     box-shadow: var(--shadow);
@@ -36,6 +36,16 @@ img {
     margin-top: 1rem;
 }
 
+@media (max-width: 1366px) {
+    .card-container {
+        height: 60vh;
+    }
+
+    p {
+        font-size: 1vw;
+    }
+}
+
 @media (max-width: 900px) {
 
     h2 {
@@ -47,7 +57,7 @@ img {
     }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 700px) {
 
     .card-container {
         width: 85%;
